@@ -1,0 +1,53 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="Celestial Wanderer"
+run/main_scene="res://Space.tscn"
+config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/resizable=false
+window/size/test_width=576
+window/size/test_height=1024
+window/handheld/orientation="sensor_portrait"
+window/stretch/aspect="keep"
+
+[importer_defaults]
+
+texture={
+"flags/filter": false,
+"flags/mipmaps": true
+}
+
+[mono]
+
+project/assembly_name="Celestial Wanderer"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+2d/default_gravity=0
+2d/default_gravity_vector=Vector2( 0, 0 )
+
+[rendering]
+
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=0
+2d/snapping/use_gpu_pixel_snap=true
+quality/filters/anisotropic_filter_level=1
+gles2/compatibility/disable_half_float=true
+environment/default_clear_color=Color( 0, 0, 0, 1 )
+quality/filters/msaa=1
+environment/default_environment="res://default_env.tres"

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://textures/ships/ship1.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Player.cs" type="Script" id=2]
+
+[node name="Player" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Ship" type="Node2D" parent="."]
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Sprite" type="Sprite" parent="Ship"]
+rotation = -1.5708
+texture = ExtResource( 1 )

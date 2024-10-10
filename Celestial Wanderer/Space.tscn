@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://PlayerCamera.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Galaxy.cs" type="Script" id=2]
+[ext_resource path="res://scripts/Travel.cs" type="Script" id=3]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/UI.cs" type="Script" id=5]
+[ext_resource path="res://scripts/fx/Sounds.cs" type="Script" id=6]
+
+[node name="Space" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="PlayerCamera" parent="." instance=ExtResource( 1 )]
+zoom = Vector2( 8, 8 )
+limit_left = -100000000
+limit_top = -100000000
+limit_right = 100000000
+limit_bottom = 100000000
+
+[node name="UI" type="Control" parent="PlayerCamera"]
+anchor_right = 1.0
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 5 )
+
+[node name="Sounds" type="Node2D" parent="PlayerCamera"]
+script = ExtResource( 6 )
+
+[node name="Galaxy" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
